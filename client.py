@@ -4,8 +4,9 @@ import sys
 
 if __name__ == "__main__":
     
-    if len(sys.argv) < 3:
-        print("Usage: {} remote_host /path/to/file".format(sys.argv[0]))
+    if len(sys.argv) < 4:
+        print("Usage: {} remote_host port /path/to/file".format(sys.argv[0]))
+        exit(0)
 
     clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
